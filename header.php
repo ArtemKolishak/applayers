@@ -31,7 +31,7 @@
     <![endif]-->
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 	<header class="navbar-fixed-top">
 		<div class="container">
     		<div class="row">
@@ -53,17 +53,17 @@
                                   	</button>
 							   	</div>
 							  	<div class="collapse navbar-collapse" id="navbar">
-									<ul class="nav navbar-nav">
-									  	<li><a href="#">Home</a></li>
-									  	<li><a href="#">Features</a></li>
-									  	<li><a href="#">Services</a></li>
-									  	<li><a href="#">How it work</a></li>
-									  	<li><a href="#">Priceing</a></li>
-									  	<li><a href="#">Team</a></li>
-									  	<li><a href="#">Testimonial </a></li>
-									  	<li><a href="#">Blog</a></li>
-									  	<li><a href="#">Contact</a></li>
-									</ul>      
+
+									<?php 
+										wp_nav_menu( array(
+											'theme_location' => 'primary',
+											'items_wrap' 	 => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+											'menu_class' 	 => 'nav navbar-nav',
+											'menu_id' 		 => '',
+											'depth'		 	 => 1,
+										) );
+									?>
+									
                           		</div>
 							</nav>
 						</div>

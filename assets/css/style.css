@@ -28,6 +28,10 @@ body {
 	  font-weight:300;
 } 
 
+body.logged-in .navbar-fixed-top {
+    top: 32px;
+}
+
 section {
     clear: both;
     padding:110px 0;
