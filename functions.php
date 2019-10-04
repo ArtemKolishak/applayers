@@ -40,6 +40,9 @@ if ( ! function_exists( 'applayers_setup' ) ) :
         add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 730, 446 );
 
+        // This theme uses wp_nav_menu() in one location.
+	    register_nav_menu( 'primary', 'Primary menu' );
+
         /*
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
