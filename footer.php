@@ -7,6 +7,7 @@
  * @package applayers
  */
 ?>
+
 <footer class="third-bg">
 	<div class="container">
 		<div class="row">
