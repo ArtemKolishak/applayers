@@ -128,5 +128,10 @@ function applayers_scripts() {
 add_action( 'wp_enqueue_scripts', 'applayers_scripts' );
 
 
+/*Filters the string in the "more" link displayed after a trimmed excerpt.*/
+add_filter( 'excerpt_more', function($more) {
+	return '';
+} );
+
 
 
