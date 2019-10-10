@@ -1,3 +1,13 @@
+<?php
+/**
+ * Template part for breadcrumbs.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package AppLayers
+ */
+?>
+
 <section class="error_top_bg secondary-bg">
 	<div class="container">
 		<div class="row">
