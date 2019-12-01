@@ -157,6 +157,10 @@ function applayers_widgets_init() {
 }
 add_action( 'widgets_init', 'applayers_widgets_init' );
 
+
+/**
+ * Widget Categories
+ */
 function applayers_widget_categories($args) {
 
     $walker = new Walker_Categories_Applayers();
@@ -166,6 +170,19 @@ function applayers_widget_categories($args) {
 }
 
 add_filter( 'widget_categories_args', 'applayers_widget_categories' );
+
+/**
+ * Widget Tag Cloud
+ */
+function applayers_tag_cloud($args) {
+
+    $args['format'] = 'list';
+    $args['smallest'] = '14';
+    $args['unit'] = 'px';
+
+    return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'applayers_tag_cloud' );
 
 /**
  * Classes.
