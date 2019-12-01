@@ -528,18 +528,18 @@ article.blog_post:last-child {
   color:#ffa200;
 }
 
-.tag-detail ul {
+.tagcloud ul {
     margin: 0 auto 30px;
     padding: 0;
 }
 
-.tag-detail li {
+.tagcloud li {
     display: inline-block;
     list-style: outside none none;
     padding:  3px 0px;
 }
 
-.tag-detail li a {
+.tagcloud li a {
     background: #f6b20e none repeat scroll 0 0;
     border-radius: 10px;
     color: hsl(0, 0%, 100%);
@@ -560,7 +560,7 @@ article.blog_post:last-child {
     color:#f6b20e;
 }
 
-.tag-detail li a:hover {
+.tagcloud li a:hover {
     background: #d7232d;
 }
 
@@ -1970,7 +1970,7 @@ footer .footer_bottom {
     font-size: 25px;
 }
 
-.tag-detail {  
+.tagcloud {  
     text-align: center;
 }
 
@@ -2440,7 +2440,7 @@ article {
     width: auto;
 }
 
-.tag-detail {  
+.tagcloud {  
     text-align: center;
 }
 

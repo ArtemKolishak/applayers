@@ -92,26 +92,6 @@
 				</div>
 			</div>	
 		</div> -->
-		
-		<!-- <div class="sidebar_wrap">
-			<div class="side_bar_heading">
-				<h6>Explore tags</h6>							
-			</div>
-			<div class="tag-detail">
-				<ul>	
-					<li> <a href="#">Company news</a></li>
-					<li> <a href="#">Fresh releases</a></li>
-					<li> <a href="#">Updates</a></li>
-					<li> <a href="#">Music</a></li>
-					<li> <a href="#">Travel</a></li>
-					<li> <a href="#">Company news</a></li>
-					<li> <a href="#">Fresh releases</a></li>
-					<li> <a href="#">Updates</a></li>
-					<li> <a href="#">Music</a></li>
-					<li> <a href="#">Travel</a></li>
-				</ul>
-			</div>
-		</div> -->
 	
 	</div>
 	<?php endif?>
