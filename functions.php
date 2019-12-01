@@ -41,6 +41,8 @@ if ( ! function_exists( 'applayers_setup' ) ) :
         add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 730, 446 );
 
+        add_image_size( 'applayers-recent-post', 80, 80, true );
+
         // This theme uses wp_nav_menu() in one location.
 	    register_nav_menu( 'primary', 'Primary menu' );
 
@@ -185,16 +187,27 @@ function applayers_tag_cloud($args) {
 add_filter( 'widget_tag_cloud_args', 'applayers_tag_cloud' );
 
 /**
+ * Register Widget Recent Post.
+ */
+function applayers_register_widget() {
+    register_widget( 'Applayers_Widget_Recent_Posts' );
+}
+
+add_action( 'widgets_init', 'applayers_register_widget' );
+
+/**
  * Classes.
  */
-require_once get_parent_theme_file_path( 'inc/classes/class-walker-categories-applayers.php' );
+require get_template_directory() . '/inc/classes/class-walker-categories-applayers.php';
+require get_template_directory() . '/inc/widgets/class-recent-post-widget-applayers.php';
 
 /**
  * Functions.
  */
-require get_parent_theme_file_path( '/inc/breadcrumbs.php' );
-require get_parent_theme_file_path( '/inc/pagination.php' );
-require get_parent_theme_file_path( '/inc/customizer.php' );
+require get_template_directory() . '/inc/breadcrumbs.php';
+require get_template_directory() . '/inc/pagination.php';
+//Customizer additions.
+require get_template_directory() . '/inc/customizer.php';
 
  /**
   * JQMIGRATE: Migrate is installed, version 1.4.1
