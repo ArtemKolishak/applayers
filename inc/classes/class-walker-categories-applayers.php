@@ -1,6 +1,6 @@
 <?php
 /**
- * Taxonomy API: Walker_Category class
+ * Taxonomy API: Walker_Categories_Applayers
  *
  * @package AppLayers
  **/
