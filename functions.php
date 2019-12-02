@@ -187,10 +187,11 @@ function applayers_tag_cloud($args) {
 add_filter( 'widget_tag_cloud_args', 'applayers_tag_cloud' );
 
 /**
- * Register Widget Recent Post.
+ * Register Widget.
  */
 function applayers_register_widget() {
     register_widget( 'Applayers_Widget_Recent_Posts' );
+    register_widget( 'Applayers_Widget_Subscribe_Form' );
 }
 
 add_action( 'widgets_init', 'applayers_register_widget' );
@@ -199,7 +200,8 @@ add_action( 'widgets_init', 'applayers_register_widget' );
  * Classes.
  */
 require get_template_directory() . '/inc/classes/class-walker-categories-applayers.php';
-require get_template_directory() . '/inc/widgets/class-recent-post-widget-applayers.php';
+require get_template_directory() . '/inc/widgets/class-applayers-recent-post-widget.php';
+require get_template_directory() . '/inc/widgets/class-applayers-subscribe-form-widget.php';
 
 /**
  * Functions.
