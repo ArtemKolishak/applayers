@@ -20,7 +20,6 @@
 		<div class="row">
 			<div class="col-md-12">
         		<div class="col-md-8">
-
 					<?php if ( have_posts() ) :?> 
 						<?php while ( have_posts() ) : the_post(); ?>
 							<article class="blog_post">
@@ -35,9 +34,9 @@
 								<div class="blog_text">
 									<ul>
 										<li> | </li>
-										<li>Post By : <?php the_author_posts_link(); ?></li>
+										<li><?php esc_html_e( 'Post By :', 'applayers' ); ?> <?php the_author_posts_link(); ?></li>
 										<li> | </li>
-										<li>On : <?php the_time( 'j F Y' ); ?></li>
+										<li><?php esc_html_e( 'On :', 'applayers' ); ?> <?php the_time( 'j F Y' ); ?></li>
 									</ul>
 								</div>
 							
@@ -47,7 +46,7 @@
 							
 								<?php the_excerpt(); ?>
 						
-								<a href="<?php the_permalink(); ?>">Continue reading <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+								<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Continue reading', 'applayers' ); ?> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 							</article>
 					
 						<?php endwhile; ?>

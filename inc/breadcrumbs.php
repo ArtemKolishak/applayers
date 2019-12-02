@@ -8,8 +8,7 @@
 function applayers_the_breadcrumbs(){
     global $post;
     if(!is_home()){ 
-        echo 
-            '<li><a href="'.site_url() . '"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+        echo '<li><a href="'.site_url() . '"><i class="fa fa-home" aria-hidden="true"></i>'.esc_html__( 'Home', 'applayers' ). '</a></li>
             <li> / </li>' ;
             if(is_single()){ // posts
             the_category( ', ' );
@@ -43,7 +42,7 @@ function applayers_the_breadcrumbs(){
                         single_cat_title();
                 }
                 elseif (is_search()) { // search pages
-                    echo 'Search results "' . get_search_query() . '"';
+                    echo esc_html__( 'Search results "', 'applayers') . get_search_query() . '"';
                 }
                 elseif (is_tag()) { // tags
                     echo single_tag_title('', false);
@@ -72,7 +71,7 @@ function applayers_the_breadcrumbs(){
                     echo '<li>Posted ' . $userdata->display_name . '</li>';
                 } 
                 elseif (is_404()) { // if page not found
-                    echo '<li>Error 404</li>';
+                    echo '<li>'. esc_html__( 'Error 404', 'applayers' ). '</li>';
                 }
                 if (get_query_var('paged')) // number of page
                     echo ' (' . get_query_var('paged' ).'- page)';
@@ -81,10 +80,10 @@ function applayers_the_breadcrumbs(){
         $pageNum=(get_query_var('paged')) ? get_query_var('paged') : 1;
         if($pageNum>1)
             echo 
-                '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>;
+                '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__( 'Home', 'applayers' ). '</a></li>;
                 <li> / </li>  <li>'.$pageNum.'- page</li>';
             else 
-                echo '<li><i class="fa fa-home" aria-hidden="true"></i>Home</li>';
+                echo '<li><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__( 'Home', 'applayers' ) . '</li>';
     }
 }
 
