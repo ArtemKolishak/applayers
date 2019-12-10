@@ -196,6 +196,21 @@ function applayers_register_widget() {
 
 add_action( 'widgets_init', 'applayers_register_widget' );
 
+// Change order comment fields
+add_filter( 'comment_form_fields', 'applayers_reorder_comment_fields' );
+function applayers_reorder_comment_fields($fields) {
+    $new_fields = array();
+    $myorder = array( 'author', 'email', 'comment' );
+    foreach( $myorder as $key ) {
+        $new_fields[ $key ] = $fields[ $key ];
+        unset( $fields[ $key ] );
+    }
+    if( $fields )
+        foreach ($fields as $key => $val) 
+            $new_fields[ $key ] = $fields[ $key ];
+    return $new_fields;
+}
+
 /**
  * Classes.
  */
