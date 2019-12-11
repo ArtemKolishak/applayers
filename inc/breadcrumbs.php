@@ -5,7 +5,7 @@
  * @package AppLayers
  */
 
-function applayers_the_breadcrumbs(){
+function applayers_the_breadcrumbs() {
     global $post;
     if(!is_home()){ 
         echo '<li><a href="'.site_url() . '"><i class="fa fa-home" aria-hidden="true"></i>'.esc_html__( 'Home', 'applayers' ). '</a></li>

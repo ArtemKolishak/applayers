@@ -102,6 +102,10 @@ function applayers_scripts() {
 	//Font-Awesome CSS File
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri(). '/assets/libs/font-awesome/css/font-awesome.min.css', array( 'applayers-style' ) );
 
+    //Google Fonts
+    wp_enqueue_style( 'font-roboto', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700', array( 'applayers-style' ) );
+     wp_enqueue_style( 'font-open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700', array( 'applayers-style' ) );
+
 	//Animate.CSS CSS File
 	wp_enqueue_style( 'animate', get_template_directory_uri(). '/assets/libs/animate.css/animate.min.css', array( 'applayers-style' ) );
 
@@ -126,6 +130,14 @@ function applayers_scripts() {
     wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/assets/js/jquery.easing.min.js', array( 'jquery' ), '', true);
 
     wp_enqueue_script( 'agency', get_template_directory_uri() . '/assets/js/agency.js', array( 'jquery' ), '', true);
+
+    //[if lt IE 9]
+    wp_enqueue_script( 'html5shiv', 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js', array( 'jquery' ), '', true);
+    wp_enqueue_script( 'respond', 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js', array( 'jquery' ), '', true);
+    
+    wp_script_add_data('html5shiv', 'conditional', 'lt IE 9');
+    wp_script_add_data('respond', 'conditional', 'lt IE 9');
+    //[endif]
 }
 
 add_action( 'wp_enqueue_scripts', 'applayers_scripts' );
