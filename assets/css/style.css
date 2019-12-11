@@ -28,10 +28,6 @@ body {
     font-weight:300;
 } 
 
-body.logged-in .navbar-fixed-top {
-    top: 32px;
-}
-
 section {
     clear: both;
     padding:110px 0;
@@ -572,15 +568,6 @@ article.blog_post {
     margin: 0;
     padding: 25px 0;
 }
-
-.widget_subscribe_form .side_bar_heading h6 {
-    color: #fff;
-}
-
-.widget_subscribe_form .side_bar_heading h6::after {
-    color: rgba(255, 255, 255, 0.5);
-}
-
 
 /*coming soon*/
 
@@ -2951,51 +2938,6 @@ article {
     left: 244px;  
 }
 
-}
-
-/* Comment list style */
-
-.comment-list,
-.children {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.comment-list .comment {
-    margin-top: 20px;
-}
-
-.comment-wrap-info {
-    overflow: hidden;
-}
-
-.comment-author,
-.comment-meta {
-    float: left;
-}
-
-.comment-author {
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-.comment-meta .author-name {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-}
-
-.comment-meta .comment-date,
-.comment-reply-link {
-    font-size: 11px;
-    font-weight: 600;
-    color: #333;
-    text-transform: uppercase;
-}
-
-.comment-meta .comment-date:hover,
-.comment-reply-link:hover,
-.comment-awaiting-moderation {
-    color: #f6b20e;
 }
 
 

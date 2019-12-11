@@ -11,10 +11,11 @@
  *
  * @package applayers
  */
- ?>
 
- <?php get_header(); ?>
-<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+get_header();
+get_template_part( 'template-parts/breadcrumbs' );
+
+?>
 
 <section class="post_blog_bg primary-bg">
 	<div class="container">
