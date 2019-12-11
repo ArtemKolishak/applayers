@@ -35,6 +35,8 @@ if ( post_password_required() )
                     'style'       => 'ol',
                     'short_ping'  => true,
                     'avatar_size' => 74,
+                    'callback'    => 'applayers_list_comment',
+                    'max_depth'   => '2'
                 ) );
             ?>
         </ol><!-- .comment-list -->
@@ -68,8 +70,8 @@ if ( post_password_required() )
 				'<input id="email" class="form-control" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '"' . $aria_req . ' /></div>',
 	    	),
 
-	    	'class_submit' => 'btn btn-default',
-	    	'submit_field' => '<div class="section_sub_btn">%1$s %2$s</div>',
+	    	'class_submit'  => 'btn btn-default',
+	    	'submit_field'  => '<div class="section_sub_btn">%1$s %2$s</div>',
 	    	'comment_field' => '<div class="form-group comment-form-comment"><label for="comment">' . esc_html_x( 'Message', 'applayers' ) . '</label> <textarea id="comment" class="form-textarea" name="comment" rows="3" aria-required="true"></textarea></div>'
 	    );
 

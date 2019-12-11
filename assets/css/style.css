@@ -10,7 +10,7 @@
     background: #64bb67; 
     color:#fff; 
     text-shadow: none; 
-  }
+}
 
 ::selection { 
     background:#64bb67; 
@@ -2951,6 +2951,51 @@ article {
     left: 244px;  
 }
 
+}
+
+/* Comment list style */
+
+.comment-list,
+.children {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.comment-list .comment {
+    margin-top: 20px;
+}
+
+.comment-wrap-info {
+    overflow: hidden;
+}
+
+.comment-author,
+.comment-meta {
+    float: left;
+}
+
+.comment-author {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.comment-meta .author-name {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.comment-meta .comment-date,
+.comment-reply-link {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.comment-meta .comment-date:hover,
+.comment-reply-link:hover,
+.comment-awaiting-moderation {
+    color: #f6b20e;
 }
 
 
