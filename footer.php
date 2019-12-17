@@ -2,9 +2,11 @@
 /**
  * The template for displaying the footer
  *
+ * Contains the closing of the #content div and all content after.
+ *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package AppLayers
+ * @package applayers
  */
 ?>
 
@@ -39,14 +41,14 @@
 						<li><a href="<?php echo get_theme_mod( 'instagram_social' ); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 						<?php endif?>
 					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+				</div><!-- .footer_top -->
+			</div><!-- .col-md-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->
 	<div class="footer_bottom fourth-bg">
 		<p><?php echo get_theme_mod( 'footer_copy' ); ?></p>
-	</div>		
-</footer>
+	</div><!-- .footer_bottom fourth-bg	 -->
+</footer><!-- .third-bg -->
 </body>
 
 <?php wp_footer(); ?>

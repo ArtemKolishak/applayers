@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Theme_Customization_API
  * 
- * @package AppLayers
+ * @package applayers
  */
 
 function applayers_customize_register( $wp_customize ) {

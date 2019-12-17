@@ -15,7 +15,7 @@
 		<ul> 
 			<li><?php the_category(', '); ?></li>
 		</ul>
-	</div>	
+	</div><!-- .blog_category -->	
 
 	<div class="blog_text">
 		<ul>
@@ -24,14 +24,14 @@
 			<li> | </li>
 			<li><?php esc_html_e( 'On :', 'applayers' ); ?> <?php the_time( 'j F Y' ); ?></li>
 		</ul>
-	</div>
+	</div><!-- .blog_text -->
 							
 	<div class="blog_post_img">
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-	</div>
+	</div><!-- .blog_post_img -->
 							
 		<?php the_excerpt(); ?>
 						
 		<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Continue reading', 'applayers' ); ?> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 
-</article>
+</article><!-- #post-<?php the_ID(); ?> -->

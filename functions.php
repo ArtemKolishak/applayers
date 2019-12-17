@@ -1,12 +1,27 @@
 <?php
 /**
- * AppLayers functions and definitions
+ * applayers functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package AppLayers
+ * @package applayers
  */
 
+/**
+ * Table of Contents:
+ * Theme Support
+ * Register Sidebars(Register widget area.)
+ * Register Styles
+ * Register Scripts
+ * Required Files
+ * Filters the string in the "more" link displayed after a trimmed excerpt
+ * Widget Categories
+ * Widget Tag Cloud
+ * Register Widget
+ * Change order comment fields
+ * Comment list
+ * JQMIGRATE: Migrate is installed, version 1.4.1
+ */
 
 if ( ! function_exists( 'applayers_setup' ) ) :
 	/**
@@ -89,6 +104,24 @@ if ( ! function_exists( 'applayers_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'applayers_setup' );
 
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function applayers_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Main Sidebar', 'applayers' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'applayers' ),
+        'before_widget' => '<div id="%1$s" class="sidebar_wrap %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="side_bar_heading"><h6>',
+        'after_title'   => '</h6></div>',
+    ) );
+}
+add_action( 'widgets_init', 'applayers_widgets_init' );
+
  /**
  * Enqueue scripts and styles.
  */
@@ -139,8 +172,23 @@ function applayers_scripts() {
     wp_script_add_data('respond', 'conditional', 'lt IE 9');
     //[endif]
 }
-
 add_action( 'wp_enqueue_scripts', 'applayers_scripts' );
+
+/**
+ * REQUIRED FILES
+ * Include required files.
+ */
+
+//Classes
+require get_template_directory() . '/inc/widgets/class-walker-categories-applayers.php';
+require get_template_directory() . '/inc/widgets/class-applayers-recent-post-widget.php';
+require get_template_directory() . '/inc/widgets/class-applayers-subscribe-form-widget.php';
+
+//Functions.
+require get_template_directory() . '/inc/breadcrumbs.php';
+require get_template_directory() . '/inc/pagination.php';
+//Customizer additions.
+require get_template_directory() . '/inc/customizer.php';
 
 
 /*
@@ -149,28 +197,6 @@ add_action( 'wp_enqueue_scripts', 'applayers_scripts' );
 add_filter( 'excerpt_more', function($more) {
 	return '';
 } );
-
-
-/**
- * Register widget area.
- *
- * Add a sidebar.
- * 
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function applayers_widgets_init() {
-    register_sidebar( array(
-        'name'          => __( 'Main Sidebar', 'applayers' ),
-        'id'            => 'sidebar-1',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'applayers' ),
-        'before_widget' => '<div id="%1$s" class="sidebar_wrap %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<div class="side_bar_heading"><h6>',
-        'after_title'   => '</h6></div>',
-    ) );
-}
-add_action( 'widgets_init', 'applayers_widgets_init' );
-
 
 /**
  * Widget Categories
@@ -286,21 +312,6 @@ function applayers_list_comment($comment, $args, $depth) {
         </div><?php 
     endif;
 }
-
-/**
- * Classes.
- */
-require get_template_directory() . '/inc/classes/class-walker-categories-applayers.php';
-require get_template_directory() . '/inc/widgets/class-applayers-recent-post-widget.php';
-require get_template_directory() . '/inc/widgets/class-applayers-subscribe-form-widget.php';
-
-/**
- * Functions.
- */
-require get_template_directory() . '/inc/breadcrumbs.php';
-require get_template_directory() . '/inc/pagination.php';
-//Customizer additions.
-require get_template_directory() . '/inc/customizer.php';
 
  /**
   * JQMIGRATE: Migrate is installed, version 1.4.1

@@ -2,7 +2,7 @@
 /**
  * Theme Pagination.
  *
- * @package AppLayers
+ * @package applayers
  */
 
 function applayers_pagination( $args = array() ) {

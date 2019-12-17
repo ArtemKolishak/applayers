@@ -2,7 +2,7 @@
 /**
  * Theme Breadcrumbs.
  *
- * @package AppLayers
+ * @package applayers
  */
 
 function applayers_the_breadcrumbs() {

@@ -11,8 +11,9 @@
  */
 
 /*
- * If the current post is protected by a password and the visitor has not yet
- * entered the password we will return early without loading the comments.
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
  */
 
 if ( post_password_required() )
@@ -21,13 +22,16 @@ if ( post_password_required() )
  
 <div id="comments" class="comments-area">
  
-    <?php if ( have_comments() ) : ?>
+    <?php 
+    // You can start editing here -- including this comment!
+        if ( have_comments() ) : 
+    ?>
         <h3 class="comments-title">
             <?php
                 printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'applayers' ),
                     number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
             ?>
-        </h3>
+        </h3><!-- .comments-title -->
  
         <ol class="comment-list">
             <?php
@@ -59,6 +63,7 @@ if ( post_password_required() )
     <?php endif; // have_comments() ?>
  
  	<div class="contact_form">
+
     <?php 
 
 	    $comments_args = array(
@@ -79,5 +84,5 @@ if ( post_password_required() )
     ?>
 
  	</div><!-- .contact_form -->
-</div><!-- #comments -->
+</div><!-- #comments .comments-area -->
 

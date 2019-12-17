@@ -2,11 +2,11 @@
 /**
  * The header for our theme
  *
- * This is the template that displays all of the <head> section 
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package AppLayers
+ * @package applayers
  */
 ?>
 
@@ -28,8 +28,8 @@
         			<div class="col-md-2">
             			<div class="logo_img">
 						<a href="#"><?php the_custom_logo(); ?></a>
-						</div>
-					</div>
+						</div><!-- .logo_img -->
+					</div><!-- .col-md-2 -->
 					<div class="col-md-10">
 						<div class="menu_bar">	
 							<nav role="navigation" class="navbar navbar-default">
@@ -40,7 +40,7 @@
                                     	<span class="icon-bar"></span>
                                     	<span class="icon-bar"></span>
                                   	</button>
-							   	</div>
+							   	</div><!-- .navbar-header -->
 							  	<div class="collapse navbar-collapse" id="navbar">
 
 									<?php 
@@ -53,12 +53,12 @@
 										) );
 									?>
 									
-                          		</div>
-							</nav>
-						</div>
-    	        	</div>
-			  	</div>
-			</div>
-		</div>
-	</header>
+                          		</div><!-- .collapse navbar-collapse #navbar -->
+							</nav><!-- .navbar .navbar-default -->
+						</div><!-- .menu_bar -->
+    	        	</div><!-- .col-md-10 -->
+			  	</div><!-- .header_top -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</header><!-- .navbar-fixed-top -->
 

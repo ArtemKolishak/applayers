@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package AppLayers
+ * @package applayers
  */
 ?>
 
@@ -12,6 +12,6 @@
 	<?php if(is_active_sidebar( 'sidebar-1' ) ): ?>
 	<div class="side_blog_bg">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</div>
+	</div><!-- .side_blog_bg -->
 	<?php endif; ?>
-</aside>
+</aside><!-- .col-md-4 -->

@@ -16,29 +16,35 @@
 		<div class="row">
 			<div class="col-md-12">
         		<div class="col-md-8">
-					<?php if ( have_posts() ) :?> 
-						<?php while ( have_posts() ) : the_post();
-							
-							get_template_part( 'template-parts/content', 'single' );
 
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) {
-								comments_template();
-							}
+					<?php 
+						if ( have_posts() ) :
+						  	/* Start the Loop */
+							while ( have_posts() ) : 
+								the_post();
+								
+								get_template_part( 'template-parts/content', 'single' );
 
-						endwhile; ?>
-					<?php endif; ?>	
+								// If comments are open or we have at least one comment, load up the comment template.
+								if ( comments_open() || get_comments_number() ) {
+									comments_template();
+								}
+
+							endwhile; 
+							/* End of the loop */
+						endif; 
+					?>	
 
 					<?php applayers_pagination(); ?>
 
-				</div>	
+				</div><!-- .col-md-8 -->
 
 				<!-- sidebar -->
 				<?php get_sidebar(); ?>
 				
-			</div>
-		</div>
-	</div>
-</section>
+			</div><!-- .col-md-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- .post_blog_bg .primary-bg -->
 
 <?php get_footer(); ?>

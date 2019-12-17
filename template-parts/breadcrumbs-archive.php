@@ -15,7 +15,7 @@
 				<div class="top_banner">
 					<div class="category_m">
 
-						<h2><?php echo wp_get_document_title(); ?></h2>
+						<?php the_archive_title( '<h2>', '</h2>' ); ?>
 						
 						<div class="breadcrumb_m">
 							<ul class="breadcrumbs_m" id="breadcrumbs_m">

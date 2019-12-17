@@ -337,10 +337,10 @@ class Applayers_Widget_Subscribe_Form extends WP_Widget {
         <form>
         	<div class="form-group blog_form">
             	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php esc_html_e('Email Address', 'applayers'); ?>">
-           	</div>
+           	</div><!-- form-group blog_form -->
            	<div class="search_btn-3">
              	<button class="btn btn-default" type="submit"><?php esc_html_e('Subscribe', 'applayers'); ?>  </button>
-           	</div>
+           	</div><!-- .search_btn-3 -->
         </form>
 
   		<?php

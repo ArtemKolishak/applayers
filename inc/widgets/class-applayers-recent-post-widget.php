@@ -104,7 +104,7 @@ class Applayers_Widget_Recent_Posts extends WP_Widget {
 				<div class="recent-detail">
 					<div class="recent-image">
 						<a href="<?php the_permalink( $recent_post->ID ); ?>"><?php echo get_the_post_thumbnail($recent_post->ID,'applayers-recent-post'); ?></a>
-					</div> 		
+					</div><!-- .recent-image  -->		
 					<div class="recent-text">
 						<h6><a href="<?php the_permalink( $recent_post->ID ); ?>"><?php echo $title; ?></a></h6>
 						<?php 
@@ -124,9 +124,9 @@ class Applayers_Widget_Recent_Posts extends WP_Widget {
 									</a></li>
 								<?php endforeach; ?>
 							</ul>
-						</div>
-					</div>
-				</div>
+						</div><!-- .blog_category .side_category -->
+					</div><!-- .recent-text -->
+				</div><!-- .recent-detail -->
 			<?php if ( $show_date ) : ?>
 				<span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
 			<?php endif; ?>
