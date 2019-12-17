@@ -1,3 +1,5 @@
+
+
 +function ($) {
   'use strict';
 
@@ -160,7 +162,7 @@
 
 }(jQuery);
 
-(function($) { 
+
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -180,4 +182,5 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
-})(jQuery);
+
+
