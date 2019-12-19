@@ -27,7 +27,7 @@
         		<div class="header_top">
         			<div class="col-md-2">
             			<div class="logo_img">
-						<a href="#"><?php the_custom_logo(); ?></a>
+						<?php the_custom_logo(); ?>
 						</div><!-- .logo_img -->
 					</div><!-- .col-md-2 -->
 					<div class="col-md-10">
