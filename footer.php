@@ -49,8 +49,8 @@
 		<p><?php echo get_theme_mod( 'footer_copy' ); ?></p>
 	</div><!-- .footer_bottom fourth-bg	 -->
 </footer><!-- .third-bg -->
-</body>
 
 <?php wp_footer(); ?>
 
+</body>
 </html>
